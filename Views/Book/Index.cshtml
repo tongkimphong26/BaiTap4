@@ -1,0 +1,54 @@
+﻿@model System.Collections.Generic.List<BaiTapBuoi4.Models.Book>
+
+<div class="book-list">
+
+    <h2>Danh sách sách</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Tên sách</th>
+                <th>Giá</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>@book.Id</td>
+                    <td>@book.Name</td>
+                    <td>@book.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+<style>
+    .book-list {
+        margin: 30px;
+    }
+
+        .book-list h2 {
+            margin-bottom: 25px;
+        }
+
+        .book-list table {
+            border-collapse: collapse;
+            min-width: 450px;
+        }
+
+        .book-list th,
+        .book-list td {
+            border: 1px solid #555;
+            padding: 10px 20px;
+            text-align: left;
+        }
+
+        .book-list th {
+            font-weight: bold;
+        }
+</style>

@@ -1,0 +1,74 @@
+﻿@model BaiTapBuoi4.Models.Book
+
+<div class="create-book">
+
+    <h2>Thêm sách</h2>
+
+    <form method="post">
+
+        <div class="form-group">
+            <label>Tên sách</label>
+            <input type="text" name="Name" />
+        </div>
+
+        <span class="error">
+            @Html.ValidationMessageFor(model => model.Name)
+        </span>
+
+        <div class="form-group">
+            <label>Giá</label>
+            <input type="number" name="Price" />
+        </div>
+
+        <span class="error">
+            @Html.ValidationMessageFor(model => model.Price)
+        </span>
+
+        <button type="submit">Thêm sách</button>
+
+    </form>
+
+</div>
+
+<style>
+    .create-book {
+        width: 500px;
+        margin: 30px auto;
+    }
+
+        .create-book h2 {
+            margin-bottom: 25px;
+        }
+
+    .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+        .form-group label {
+            width: 80px;
+            font-size: 18px;
+        }
+
+        .form-group input {
+            width: 280px;
+            height: 36px;
+            padding: 5px 10px;
+            box-sizing: border-box;
+        }
+
+    .error {
+        display: block;
+        margin-left: 80px;
+        margin-bottom: 12px;
+        color: red;
+    }
+
+    .create-book button {
+        margin-left: 80px;
+        padding: 8px 15px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
